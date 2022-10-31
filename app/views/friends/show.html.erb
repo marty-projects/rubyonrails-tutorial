@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @friend %>
+
+
+<div class="jumbotron">
+  <p class="display-4"><%= render @friend %></p>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-secondary" %>
+  <br><br>
+  <%= button_to "Destroy this friend", @friend, method: :delete, class: "btn btn-secondary btn-dark" %>
+</div>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
-  <%= link_to "Back to friends", friends_path %>
-
-  <%= button_to "Destroy this friend", @friend, method: :delete %>
+  <%= link_to "Back to friends", friends_path, class: "btn btn-info " %>
+  <br><br/>
 </div>
